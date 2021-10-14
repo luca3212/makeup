@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+//font titulo
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+@import "headerStyle";
+@import "seccionProductos";
+@import "seccionCarro";
+@import "modalFotos";
+
+@import "seccionPagos";
+@import "seccionEnvios";
+@import "seccionContacto";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+// font-style:
+// Regular 400
+// Regular 400 italic
+// Bold 700
+:root{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    height: 100%;
+    //background: linear-gradient(to left, #ff9966, #ff5e62);
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+}
+
+.conteCentro{
+    width: 1000px ;
+    //border:1px solid black;
+}
+
+.tituloSeccion{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+    //border: 1px solid black;
+    padding: 20px 0;
+}
+
+#Productos,#Pagos,#Envios,#Contacto,#Carro{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //border: 1px solid black;
+    width: 100%;
+    
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    //border: 1px solid black;
+ 
+}
+/*#secciones{
+    //border:1px solid red;
+}*/

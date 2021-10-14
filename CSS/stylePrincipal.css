@@ -1,0 +1,969 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#ff9966), to(#ff5e62));
+  background: linear-gradient(to left, #ff9966, #ff5e62);
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .conteCentro {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 1150px) {
+  header .conteCentro {
+    width: 100%;
+  }
+}
+
+.titulo {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+}
+
+.titulo h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-family: 'Birthstone', cursive;
+  font-weight: 400;
+}
+
+.menu {
+  min-width: 570px;
+  max-width: 600px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu ul.tabs {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu ul.tabs li {
+  width: 100%;
+}
+
+.menu ul.tabs li a {
+  padding: 8px;
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu ul.tabs li a:hover {
+  background-color: rgba(20, 20, 20, 0.1);
+}
+
+.icono-cierre {
+  color: #fff;
+  font-size: 36px;
+  display: none;
+}
+
+.icono-menu {
+  color: #fff;
+  font-size: 36px;
+  display: none;
+}
+
+.menu-burger {
+  display: none;
+  /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //border:1px solid black;
+    padding: 0 16px;*/
+}
+
+.disable {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .icono-menu {
+    display: block;
+  }
+  .conteCentro {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 16px;
+  }
+  .icono-cierre {
+    display: block;
+    text-align: left;
+  }
+  .menu {
+    min-width: 0;
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #f7f7f7;
+    top: 0;
+    right: -100%;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .menu ul.tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu ul.tabs li {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu ul.tabs li:first-child {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: -webkit-gradient(linear, right top, left top, from(#ff9966), to(#ff5e62));
+    background: linear-gradient(to left, #ff9966, #ff5e62);
+  }
+  .menu ul.tabs li a {
+    text-align: left;
+    color: #000;
+    width: 100%;
+    padding: 16px 8px;
+    border-radius: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray;
+  }
+  .menu ul.tabs li a::before {
+    content: '<';
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+.mostrarmenu {
+  right: 0;
+}
+
+.listaProductos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+#Productos .tituloSeccion {
+  padding: 10px 0 8px 10px;
+  border-left: 6px solid #ff6262;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 3px 7px 10px rgba(0, 0, 0, 0.4);
+}
+
+#icoCarro {
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: black;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#ff9966), to(#ff5e62));
+  background: linear-gradient(to left, #ff9966, #ff5e62);
+}
+
+#icoCarro span {
+  color: #fff;
+  font-size: 36px;
+}
+
+#icoCarro div {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 3px solid #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#icoCarro div h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.cuadro {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid rgba(3, 3, 3, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ebebeb), color-stop(50%, #fff));
+  background: linear-gradient(180deg, #ebebeb 50%, #fff 50%);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cuadro:hover {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cuadro .conte-foto {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px 16px 0 0;
+}
+
+.cuadro .conte-foto .foto {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 70%;
+}
+
+.cuadro .conte-foto .foto img {
+  max-width: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cuadro .conte-foto .foto img:hover {
+  opacity: 1.5;
+}
+
+.cuadro .datos {
+  width: 100%;
+  height: 100px;
+  color: #000;
+  text-align: center;
+  margin: 8px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cuadro .datos h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.cuadro .datos p {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.cuadro .datos h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cuadro .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.cuadro .botones button {
+  width: 80%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #ebebeb;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.cuadro .botones button.btonDisable {
+  background: #369e5e;
+  color: #fff;
+  pointer-events: none;
+}
+
+.cuadro .botones button:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#ff9966), to(#ff5e62));
+  background: linear-gradient(to left, #ff9966, #ff5e62);
+  color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  #Productos .conteCentro {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .conteProductos {
+    width: 100%;
+    padding: 8px;
+  }
+  #icoCarro {
+    bottom: 10px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .listaProductos {
+    padding: 16px;
+  }
+  #icoCarro {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.cuerpoCarro {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cuerpoCarro .conteItem {
+  margin-top: 10px;
+}
+
+.itemLista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  border: 1px solid rgba(3, 3, 3, 0.1);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.itemFoto,
+.itemdatos,
+.itembotones,
+.total {
+  background-color: white;
+}
+
+.itemFoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+}
+
+.itemFoto div {
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.itemFoto div img {
+  max-width: 100%;
+}
+
+.itemdatos {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.itemdatos div {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.itemdatos div h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.itemdatos div p {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.itemdatos div h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.itembotones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+  border-right: 1px solid rgba(3, 3, 3, 0.1);
+  border-left: 1px solid rgba(3, 3, 3, 0.1);
+}
+
+.itembotones .btnsContador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid rgba(3, 3, 3, 0.1);
+  height: 50%;
+}
+
+.itembotones .btnsContador input {
+  text-align: center;
+  width: 30px;
+  border: 1px solid black;
+  background: none;
+  font-size: 24px;
+  margin: 0 15px;
+}
+
+.itembotones .btnsContador button {
+  font-size: 24px;
+  border: none;
+  padding: 4px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.itembotones .btnsContador button:hover {
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.itembotones .BtnEliminar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.itembotones .BtnEliminar button {
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.itembotones .BtnEliminar button span {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.itembotones .BtnEliminar button:hover {
+  background: #d33a3a;
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4px;
+}
+
+.totales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(3, 3, 3, 0.1);
+  margin-top: 10px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 16px;
+}
+
+.totales .contenedorTotales {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.totales .contenedorTotales div {
+  margin-right: 16px;
+}
+
+.totales .contenedorTotales div h2 {
+  font-size: 2rem;
+}
+
+.totales .contenedorTotales #montoTotal {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.totales .btnCarro {
+  width: 100%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.totales .btnCarro button {
+  width: 215px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.totales .btnCarro button span {
+  font-size: 24px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.totales .btnCarro button:hover {
+  background: #000;
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 50px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.contePagos {
+  padding: 0 40px;
+}
+
+.listaPagos {
+  border: 1px solid black;
+}
+
+.conteEnvios {
+  padding: 0 40px;
+}
+
+.listaEnvios {
+  border: 1px solid black;
+}
+
+.conteContacto {
+  padding: 0 40px;
+}
+
+.listaContacto {
+  border: 1px solid black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.conteCentro {
+  width: 1000px;
+}
+
+.tituloSeccion {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding: 20px 0;
+}
+
+#Productos, #Pagos, #Envios, #Contacto, #Carro {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+footer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/*#secciones{
+    //border:1px solid red;
+}*/
+/*# sourceMappingURL=stylePrincipal.css.map */

@@ -1,0 +1,232 @@
+
+.listaProductos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    
+}
+
+#Productos{
+    .tituloSeccion{
+       
+        
+        padding: 10px 0 8px 10px;
+        border-left: 6px solid #ff6262;
+        
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-shadow: 3px 7px 10px rgba(0, 0, 0, 0.4);
+
+    }
+}
+
+#icoCarro{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0,  0.10);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(to left, #ff9966, #ff5e62);
+    span{
+        
+        color: #fff;
+        font-size: 36px;
+    }
+    div{
+        position: absolute;
+        top: -10px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50%;
+        background-color: #000;
+
+        
+        border: 3px solid #f7f7f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+        h3{
+            text-align: center;
+            color:#fff;
+        }
+    }
+
+    
+}
+
+.cuadro{
+    //
+    //width: 200px;
+    //height: 310px;
+    height: max-content;
+    border: 1px solid rgba(3, 3, 3,0.1);
+    
+
+    background: linear-gradient(180deg, #ebebeb 50%, #fff 50%);
+    //background-color: rgba(255,255,255,1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    
+   // padding: 8px;
+    //box-shadow: 0 0.5rem 1.5rem rgba(0,0,0, 0.15);
+
+    &:hover{
+        //background: linear-gradient(to left, #ff9966, #ff5e62);
+        //border-radius: 16px;
+        //padding: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    
+   
+
+    .conte-foto{
+        width: 100%;
+        //background: #ebebeb;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        border-radius: 16px 16px 0 0 ;
+
+        .foto{
+            margin-top: 5px;
+            display: flex;
+            height: 100%;
+           
+            width: 70%;
+            img{
+                max-width: 100%;
+               
+                //border-radius: 8px 8px 0 0;
+                //margin-top: 8px;
+                
+                cursor: pointer;
+                transition: 0.3s;
+                
+                //border: 4px solid #fff;
+                &:hover{
+                    opacity: 1.5;
+                   
+                }
+            }       
+        }
+
+    }
+    
+   
+    .datos{
+        width: 100%;
+        height: 100px;
+        //background-color: cadetblue;
+        color: #000;
+        text-align: center;
+        margin: 8px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3{
+            
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+        }
+        p{
+            font-style: italic;
+            font-size: 1rem;
+            
+        }
+        h2{
+            font-size: 1.2rem;
+            font-weight: bold;
+            
+        }
+
+    }
+    .botones{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        padding: 8px;
+         
+        button{
+           width: 80%;
+           padding: 8px;
+           border:none;
+           border-radius: 8px;
+           background: rgb(235, 235, 235);
+           cursor: pointer;
+           transition:  0.3s;
+           font-weight: bold;
+           
+           &.btonDisable{
+                background : #369e5e;
+                color : #fff;
+                pointer-events: none; 
+                
+            }
+           &:hover{
+                           
+                background: linear-gradient(to left, #ff9966, #ff5e62);
+                color:#fff;
+                
+            }
+
+        }
+
+       
+
+    }
+}
+
+
+
+@media screen and (max-width: 1100px){
+    #Productos{
+        .conteCentro{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .conteProductos{
+        width: 100%;
+        padding: 8px;
+        //border:1px solid red;
+    }
+
+    #icoCarro{
+        bottom: 10px;
+        right: 30px;
+
+    }
+   
+}
+
+@media screen and (max-width: 447px){
+    .listaProductos{
+        padding: 16px;
+    }
+    #icoCarro{
+        bottom: 10px;
+        right: 10px;
+
+    }
+
+}
