@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma Maquillaje | Website</title>
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="CSS/stylePrincipal.css">
+
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+
+    <script type="text/javascript" src="JS/jquery-3.1.1.js"></script>
+
+    
+</head>
+<body>
+
+    <header>
+        <div class="conteCentro">
+            <div class="titulo">
+                <h1>- Luma Maquillaje -</h1>
+            </div>
+            <div class="menu" id="menuPrincipal">
+                <ul class="tabs">
+                    <li class="icono-cierre" id="cerrarMenu"><span id="close" class="mdi mdi-chevron-right"></span></li>
+
+                    <li><a href="#Productos" class="">Productos</a></li>
+                                                    
+                    <li><a href="#Envios" class="">Envios</a></li>
+                    
+                    <li><a href="#Pagos">Formas de Pago</a></li>
+                     
+                    <li><a href="#Contacto" >Contacto</a></li>
+                </ul>
+            </div>
+            <div class="menu-burger" id="divBurger">
+                <span id="icoMenu" class="mdi mdi-menu icono-menu"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="secciones">
+        <article id="Productos">
+            <div class="conteCentro">
+                <div class="conteProductos">
+                    <div class="tituloProduto">
+                        <h2 class="tituloSeccion">Productos</h2>
+                    </div>
+                    <div id="divProductos" class="listaProductos">
+
+                      <!-- <div class="cuadro">
+                           <div class="foto"></div>
+                           <div class="datos">
+                               <h3></h3>
+                               <p></p>
+                               <h2></h2>
+                           </div>
+                           <div class="botones">
+                               <button>Añadir al carrito</button>
+                           </div>
+                       </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div id="icoCarro">
+                <span class="mdi mdi-shopping-outline"></span>
+                <div id="nroCarro">
+                    <h3 id="mostrarnro" value="0">0</h3>
+                </div>
+            </div>
+        </article>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    
+        <article id="Envios">
+            <div class="conteCentro">
+                <div class="conteEnvios">
+                    <div class="tituloEnvios">
+                        <h2 class="tituloSeccion">Envios</h2>
+                    </div>
+                    <div class="listaEnvios">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+    
+        <article id="Pagos">
+            <div class="conteCentro">
+                <div class="contePagos">
+                    <div class="tituloPagos">
+                        <h2 class="tituloSeccion">Formas de Pago</h2>
+                    </div>
+                    <div class="listaPagos">
+                        lista a mostrar
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+    
+        <article id="Contacto">
+            <div class="conteCentro">
+                <div class="conteContacto">
+                    <div class="tituloContacto">
+                        <h2 class="tituloSeccion">Contacto</h2>
+                    </div>
+                    <div class="listaContacto">
+                        lista a mostrar
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="Carro">
+            <div class="conteCentro">
+                <div class="tituloCarro">
+                    <h2 class="tituloSeccion">Carrito</h2>
+                </div>
+                <div class="cuerpoCarro" id="ListaCarro">
+                    <div class="conteItem" idItemProducto="">
+                        <div class="itemLista">
+                            <div class="itemFoto">
+                                <div>
+                                    <p>foto</p>
+                                    <!--<img src="" alt="">-->
+                                </div>
+                            </div>
+                            <div class="itemdatos">
+                                <div>
+                                    <h3>titulo</h3>
+                                    <p>descripcion</p>
+                                    <h2>Precio unitario: </h2>
+                                </div>
+                            </div>
+                            <div class="itembotones">
+                                <div class="btnsContador">
+                                    <button class="mdi mdi-minus"></button>
+                                    <input type="text" name="contadorC" readonly>
+                                    <button class="mdi mdi-plus"></button>
+                                </div>
+                                <div class="BtnEliminar">
+                                    <button  onclick="eliminarItem()"><span class="mdi mdi-trash-can-outline"></span></button>
+                                </div>
+                            </div>
+                            <div class="total">
+                                <h2>subtotal</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="totales">
+                    <div class="contenedorTotales">
+                        <div>
+                            <h2>Total:</h2>
+                        </div>
+                        <div id="montoTotal">
+    
+                        </div>
+                    </div>
+
+                    <div class="btnCarro">
+                        <button> <span class="mdi mdi-check-bold"></span> Confirmar Compra</button>
+                        <!--<button>VACIAR CARRITO</button>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+    </div>
+    
+
+    <footer>
+        
+    </footer>
+    <script type="text/javascript" src="JS/items.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        //var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        function agrandar(id){
+          modal.style.display = "block";
+          modalImg.src = "IMG/img"+id+".jpg";
+          //captionText.innerHTML = ;
+        }
+       
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+</body>
+</html>
