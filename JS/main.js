@@ -5,7 +5,7 @@ $.ajax({
             success:function(datos){ //success es una funcion que se utiliza si el servidor retorna informacion
                 console.log(datos);
             },
-            dataType: dataType // El tipo de datos esperados del servidor. Valor predeterminado: Intelligent Guess (xml, json, script, text, html).
+            //dataType: dataType // El tipo de datos esperados del servidor. Valor predeterminado: Intelligent Guess (xml, json, script, text, html).
 });
 //Array productos seleccionados
 carroLocal = [];
